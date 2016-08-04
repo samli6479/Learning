@@ -8,5 +8,6 @@ public class Main {
            smallDog.makeNoise(); /*Invokation of the small dog's makeNoise method*/
            hugeDog.makeNoise();  /*The dot here means we want to use a method of member of 
                                  hugeDog*/
-    }
+           Dog.maxDog(smallDog, hugeDog).makeNoise();
+           }
 }

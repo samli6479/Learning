@@ -20,4 +20,12 @@ public class Dog {
           System.out.println("Bark!");
         }
     }
+
+    /* Returns larger dog. */
+    public static Dog maxDog(Dog d1, Dog d2){
+        if (d1.size > d2.size){
+           return d1;
+        }
+        return d2;
+    }
 }
