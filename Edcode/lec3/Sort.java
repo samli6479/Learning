@@ -12,7 +12,7 @@ public class Sort {
 
 	public static int indexOfSmallest(String[] a, int start){
 		int minDex = start;
-		int i = 0;
+		int i = start;
 		while (i < a.length){
 			int compareResult = a[i].compareTo(a[minDex]);
 
@@ -33,11 +33,21 @@ public class Sort {
 		// Find the smallest thing.
 		int mindex = indexOfSmallest(a, start);
 
+		// Swap it to the front.
+		swap(a , mindex, start);
+
 
 		// Find the smallest thing. 
 		// Swap it to the front
 		// Recursively sort the rest.
 		sort(a, start +1 );
+	}
+
+	/** Swap items in position ix and iy in A. */
+	public static void swap(String [] a, int ix, int iy){
+		String number = a[ix];
+		a[ix] = a[iy];
+		a[iy] = number;
 	}
 
 	/** print string */
