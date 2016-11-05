@@ -1,0 +1,9 @@
+Object requirement
+
+int head;
+IntList tail;
+
+define two versions of the same method:
+
+size()
+iterativeSize()

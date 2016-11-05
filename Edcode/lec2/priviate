@@ -1,0 +1,8 @@
+public meaning the method can be used by other classes
+
+private cannot be used by other classes
+
+Why restrict access - hide implementaion details from users of your class
+
+access control - singal to other human being that you are at some where you should not go
+

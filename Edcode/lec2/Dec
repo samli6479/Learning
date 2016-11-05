@@ -1,0 +1,29 @@
+Declaration and instantiation
+
+objects are instantiated using new keyword
+
+Objects are either: 
+
+   Instances of a class
+   Arrays
+
+int[] a; 
+
+Declaration creates a simple container intended only for storeing a reference
+Instantiation creates a new Object
+Assignment puts the address of this new Object into container 
+
+The object itself is anoymous
+
+reassign a to something else, never able to get the object back
+
+When we have empty constructor nothing happened
+
+Java allow null references 
+
+null references does not have instance variables
+
+passing variables to a function is the same of assign them
+
+Java is pass by value, the exact contents of the container in the outside frames are delivered
+to the container in the function

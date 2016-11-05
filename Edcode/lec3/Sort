@@ -1,0 +1,6 @@
+Selection Sort
+
+Selection sorting a list of N items: 
+   a. Find the smallest 'unfixed' item.
+   b. Move it to the front and 'fix' it.
+   c. Selection sort the remaining N-1 unfixed items.

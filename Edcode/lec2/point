@@ -1,0 +1,10 @@
+a variable name is Java is a name for simple container
+
+9 primitive values - byte, short, int, long, float, double, boolean,char
+
+referces to Objects (an reference)
+
+Given variables b and a: 
+
+b = a copies contens of a into b
+

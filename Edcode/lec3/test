@@ -1,0 +1,34 @@
+Developing tests
+
+1. One approach: Write tests first.
+JUnit makes this easy!
+
+Sort - main - sort
+            - print
+testsort - main - testSort ---> testing the sort method in sort
+
+Why?
+Build confidence in basic moduels.
+Decrease debugging time.
+Clarify the task
+
+Why not? 
+Building tests takes time.
+
+Test-Driver Development 
+
+Steps to developing according to TDD:
+1. Identify a new feature.
+2. Write a test for that feature.
+3. Run the test. It Should fail (Red)
+4. Write code that passes test. (Green)
+   -- Implementation is certifiably good
+5. Optional: Refactor code to make it faster, cleaner, etc.
+
+The Naive Workflow
+1. Read and understand the spec
+2. Write entire program.
+3. Compile. Fix all compilation errors.
+4. Eliminate all bugs by repeatedly:
+   a. Running top level method (e.g. main)
+   b. Adding printing statements (sometimes even binary searching for problem)
