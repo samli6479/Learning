@@ -1,0 +1,11 @@
+Method Overloading in Java
+
+Java allows multiple methods with the same name, but different parameters.
+
+This is called method overloading.
+
+Downsides
+
+1. Source code files are unnecessarily long.
+
+2. Mode code to maintain: One change made to one must made to other
