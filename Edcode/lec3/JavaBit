@@ -1,0 +1,68 @@
+Bit Opetations in Java
+
+Java provides a number of bitwise operators.
+
+Take integers as input, produce integers as output.
+
+00101100 = 32 + 8 + 4 = 44
+10100111 =>  10100110 flip = 01011001 = 64 + 16 + 8 + 1 = 89 with negative sign = -89  
+
+Makse &  Produce 1 if both are 1
+
+  00101100
+& 10100111     
+= 00100100
+
+int x = 44 & -89 = 36
+
+Set |	Produce 1 if either is 1
+
+  00101100
+| 10100111
+= 10101111
+
+int x = 44 & -89 = -81
+
+Flip ^ Produce 1 if only have one 1
+
+  00101100
+^ 10100111
+= 10001011
+
+10001011 = 10001010 flip = 01110101 =- (64 + 32 + 16 + 4 + 1) = - (21 + 96) = -117
+
+int x = 44 ^ -89 = -117
+
+Flip all 
+
+~ 10100111 
+= 01011000
+
+int x = ~-89 = 88
+ 
+Arithmetic Right >> shift x unit to the right and the top bit copied
+
+10100111 >> 3 => 00010100 => 11110100 
+
+Shift 3 unit to right and then 1 got copied to the top
+
+11110100 => 11110011 => 00001100 => -(8 + 4) = -12
+
+00101100 >> 3 => 00000101 = 5
+
+Logic Right >>> Top bit is zero
+
+10100111 >>> 3 => 00010100
+
+Left << Bottom bit zero
+
+10100111 << 3 => 00111000
+
+-1 >> 29 = 7
+
+x << n 
+1. Computes x * 2^n
+
+x >> n 
+1. Computes x/2^n
+

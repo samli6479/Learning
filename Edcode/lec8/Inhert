@@ -9,3 +9,66 @@ Downsides
 1. Source code files are unnecessarily long.
 
 2. Mode code to maintain: One change made to one must made to other
+
+Hypernyms Hyponyms and Interface Inheritance
+
+Hypernym is a class word define a categories of objects
+
+Hyponym is the sub object in A Hypernym
+
+Animal is Hypernym of dogs and dog is Hyponym of animal.
+
+Represent is relationship : Dog is animal.
+
+Hyponymic Relationships in Java
+
+SList and AList are both List
+
+List is Hypernym of SList and AList
+
+Expressing in Java two-step:
+
+1. Define a reference type for hypernym
+
+2. Specific the objects are hyponyms of that type.
+
+ex. List- AList
+		- SList
+
+1. Define all methods the type able to do.
+
+2. use implements keyword to tell them act.
+   Mark each method with the override tag
+
+Method Overriding 
+
+If a subclass has a method with the same signature as superclass
+the subclass method overrides the super class method
+
+@Override
+It is just a singal to other programmer
+
+Interface Inheritance
+The usage of the implements keyword "interface inheritance"
+
+1. All sub-classes inherit the interface from their super-class
+
+2. Intergace consists of all the method signatures.
+
+3. Such relations can be multi-generational 
+
+1. CollectionList-EdList-AList
+						-SList
+
+Copying the Bits
+
+2 contradictory facts
+
+#1 When you set x = y or pass a parameter you are just copying the bits
+
+#2 A memory box can only hold 64 bit addresses for the appropriate type
+
+If X is a superclass of Y then memory boxes for X may contain Y.
+
+ex. An SList is a List
+	Then List variabls can hold SList addresses.

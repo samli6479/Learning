@@ -1,0 +1,93 @@
+Programming Language Design 
+
+Decision #1: Number Limits
+
+Why have number limits 
+
+A programming language needs a compiler(or interpreter)
+
+1. Translates human readable code into something easy for computer to execute
+
+2. Fixed size guarantees consistent program speed
+a. Computers think natively in numbers smaller than some fixed size 
+b. On a 64-bit machine dealing with numbers greater than 64-bits is much slower
+
+Decision #2: Handling Overflow
+
+1. How to handle operations that overflow their bounds?
+
+C/C++: Not defined by the language
+
+Java: the number after the largest number is the smallest number 
+
+Binary Representations of Integers
+
+Compare to the base 10 system
+
+402 on 10 = 10^2*4+10^1*0+10^0*2 = 100*4+10*0+1*2 = 402
+
+1011 on 2 = 2^3*1+2^2*0+2^1*1+2^0*1 = 8*1 + 4*0 + 2*1 + 1*1=11
+
+100011 on 2 = 2^5*1+2^4*0+2^3*0+2^2*0+2^1*1+2^0*1 = 32*1+16*0+8*0+4*0+2*1+1*1
+			= 32+2+1 = 35
+
+addition in Binary
+
+	35			100011
++	 2		   +	10
+=	37		   =100101
+
+
+Machine Structure 
+
+The CPU of a computer has dedicated chips for operations like adding.
+	Takes in fixed number of bits
+	Each bit is delivered by a wire that has either a low(0) or high voltage(1)
+
+8-bit computer has 8 input wire and 8 output wires
+
+problem
+
+computer 			actual
+	11111111		11111111
++	00000001	 +  00000001
+=   00000000     = 100000000
+
+Truncation
+
+When performing arthmetic operations, simply truncate the number To N bits
+
+-5 in 4 bits
+
+  0101
++ 1011
+= 0000
+
+
+Two Complement
+
+To negative a number, flip the bits add one.
+
+Given a 3 bit number, we can represent at most 8 distinguish numbers
+
+US - unsigned     S - signed
+
+0 is postive , 1 is negative for the first digit from left
+
+Each integer type in Java has a range of posible values
+
+byte, short, int, long  signed
+
+8   , 16,    32,   64    
+
+char 	unsigned
+
+16 
+
+Integer Literals
+
+To get a long, append an L.
+
+System.out.println(2131L+1L);     When printing java does not print
+
+

@@ -1,0 +1,7 @@
+Higher Order Function 
+
+A function that treats another function as data
+
+ex. Old school Fundamental issue: Memory boxes(variables) cannot contain pointers to functions
+
+Wrap the function used the interface then applied it twice

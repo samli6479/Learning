@@ -1,0 +1,24 @@
+Java 
+
+Eight primitive types:
+
+The five integers types. 
+
+1. Exact representations of integers.
+2. byte, short,int,long,char
+
+The boolean type
+
+The two floating point types.
+
+Approximate represenation of reals.
+float, double 
+
+Each Integer type in Java has a range of possible values
+
+		min 	    		max
+byte    -128				127
+short   -32768				32767
+int 	-2147483648 		2147483647
+long -922337203685477580	922337203685477579
+CHAR    0 					65535

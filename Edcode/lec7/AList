@@ -1,0 +1,54 @@
+Random Access in Arrays 
+
+Retrieval from any position of an array is very fast
+
+1. Independent of aray size
+
+Ultra fast random access results from the fact that containers are the same size (in bits)
+
+AList Invariants
+
+1. The position of the next item to be inserted is alwasy size
+
+2. size is always the number of items in the AList
+
+3. The last item in the list is always size-1.
+
+For detle back to work, all we need to do is to decrease the size by 1.
+
+Array Resizing
+
+When a array is full make new array with extra length
+
+int[] a = new int[size+1];
+System.arraycopy(...)
+
+This process "resizing" Dynamic Array
+
+Inserting 100,000 items requires roughly 5,000,000,000 new containers.
+
+Computers operate at the speed of GHz(due billions of things per second)
+
+Memory Efficiency
+
+An AList should be efficient in both time and space.
+
+Usage Ratio R = size/items.length;
+
+Typical solution: Half array size when R <0.25
+
+When creating an array of references to objects
+
+Use ('class name' []) new Object[cap]
+
+causes a complier warning
+
+use new 'class name' [] will cause a generic array creation error
+
+Nulling out deleted items 
+
+Unlike integer based AList, need to null out deleted items
+
+a. Java only destroys unwanted objects when the last reference has been lost
+
+b. Keeping references to unneeded objects is loitering.

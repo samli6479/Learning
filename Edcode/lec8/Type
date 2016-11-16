@@ -1,0 +1,42 @@
+Every vaiable in Java has a compile-time
+
+Specified at declaration.
+
+also have a run-time type aka dynamic type
+
+This is the type specified at instantiation (eg. when using new)
+
+Suspose we call a method of an object using variable with 
+
+compile-time type X
+
+run-time type Y
+
+Then if Y overrides the method , Y's method is used instead
+
+Dynamic method selection only happens for overridden methods
+	When instance method of subtype overrides class of supertype
+
+Dynamic method 
+
+Interface vs. Implementation Inheritance
+
+Interface Inheritance Allows you generalize code
+
+Implementation Inheritance
+
+Allows code-reuse: Subclasses can rely on superclasses or interfaces
+
+Gives another dimension of control to subclass design: designer can 
+
+can design whether override default implementations.
+
+Con of Implementation Inheritance
+
+1. Harder to keep track of what actually implementated 
+
+2. Rule for resolving conflicts can be arcane
+
+3. Encourages overly complex code
+
+4. Break encapsulation

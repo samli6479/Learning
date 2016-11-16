@@ -1,0 +1,7 @@
+Implementation Inheritance
+
+Java allows implementation inheritance
+
+Use default keyword to specify a method that subclass should inherit from an interface
+
+ex. Let's add a print () method to EdList

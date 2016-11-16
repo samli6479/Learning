@@ -1,0 +1,57 @@
+IntList{
+	public int head;
+	public IntList tail;
+}
+
+While funcitonal, "naked" linked lists like the one above are hard to use.
+
+Users of this class are probably going to need to know references very well and be able to think recursively 
+
+Naked Linked Lists (IntList) vs SList
+
+IntList
+
+[head: 100 , tail: x]
+
+x [head : 8, tail: y]
+
+y [head : 36, tail : z]
+
+z [head : -5, tail: null]
+
+SList 
+
+-> x, y => 1. insertFront()
+		   2. getFront()
+		   3. insertBack()
+		   4. size()
+
+		   size = 4
+		   front [value :100, next: ] 
+		   		 	[value: 8, next: ]
+		   		 		[value: 36, next: ]
+		   		 			[value: -5, next: ]
+
+SList class acts as middle man between user and raw data structure 
+
+Benifits so far:
+
+1.Faster size() method than the O(N) 
+2.User of an SList never sees the IntNode class.
+	1. Simple to use
+	2. Avoids errors (or malfeasance)
+
+3. Easy to represent the empty List
+
+Invariants
+
+An invariant is a fact about data structure that is guaranteed to be true
+
+An SList with a sentinel node has at least the following invariants:
+1. The sentinel reference always points to a sentinel node.
+2. The front item(if it exists), is always at sentinel.next.item.
+3. The size vaiable is alwasy the total number of items that have benn added.
+
+Invariants make it easier to reason about code:
+1. Writting getBack? Just scan all the nodes starting the sentinel
+2. Writing insertFront? Correct as long as invariants are maintained!

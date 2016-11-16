@@ -1,0 +1,56 @@
+Variables and Objects
+
+Variables 
+
+When a variable is declared, we get a box of bits to hold one item of its declared type
+
+The box may only hold values of its declared type
+
+1. One of primitives (int, double, ...)
+
+2. References to an Object of a particular type.
+
+Objects are either: 
+
+1. An instance of a class
+
+2. An array
+
+Arrays
+
+1. A fixed integer length(cannot change!)
+
+2. A sequence of N memory boxes where N = length, st: 
+    a. All of the boxes hold the same type of value(and have same # of bits)
+    b. The boxes are numbered 0 through length-1.
+
+arrays are anonymous
+
+1. One reference when its created
+2. Reassign loss the array
+
+Can access box with A[i]
+
+Instantiated array
+
+1. x = new int[3]; contain 3 int boxes
+
+2. y = new int[] {1,2,3,4,5};
+
+3. int[] z = {9,10,11,12,13};  only worked for declare
+
+Comprise: 1. A length field, A sequence of N boxes, where N = length
+
+System.arraycopy(b,0,x,3,2);
+
+b - Source array
+
+0 - Start position in source
+
+x - Target array
+
+3 - Start position in target
+
+2 - Length of array to be coppied - 2 units include the starting position
+
+Array Boxes Can Contain References to Arrays

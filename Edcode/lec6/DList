@@ -1,0 +1,25 @@
+Improvement # 6
+
+With the back pointer and previous pointer
+
+Aka .back and .prev
+
+[previous: , item: 5, next : ]
+	[previous :, item: 17, next: ]
+The next and the previous are linked together hence (doubly linked list)
+
+# Warning
+
+back sometimes points at the sentinel, sometimes points at a 'real' node.
+
+Solution 1
+
+Two Sentinel: one front, and one back
+
+Solution 2
+
+Circular Sentinel 
+
+[previous: , sentiel item:, next ] the previous points to the last node's next 
+
+and the last node's next is point to sentiel's next

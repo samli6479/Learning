@@ -1,0 +1,88 @@
+The Extends Keyword
+
+When a class is hyponym of an interface, we used implements
+
+If you wan one class be a hyponym of another class use extends
+
+ex. List- GList- RotaingSList
+		- AList
+
+Because of extends, RotateList inherits all members of GList
+
+1. All instance and static variables
+2. All methods.
+3. All nested class.
+
+however members may be private and thus inaccessible
+
+Constructors are not inherited 
+
+Constructor all subclass constructors must start with 
+
+a call to constructor for the super class 
+
+Idea: If a subclass is-a super class, every subclass must be set up like a Superclass
+
+You can call the constructor with the keyword super
+
+If you want constructor with args in them.
+
+then you need to have super with the format of other constructor
+
+You cannot take away super in this case.
+
+Extends should only be used for is-a (hypernymic)
+
+You should not used it for "has-a" relationships (meronymic)
+
+Encapsulation 
+
+When building large programs, our enemy is complexity 
+
+Some tools for managing complexity
+
+Hierarchical abstraction
+	Create Layers of abstraction with clear abstraction barriers
+Deisgn for change
+	Organize program around objects
+	Let objects decide how things are done
+	Hide information others don't need
+
+Modules and Encapsulation 
+
+Module: A set of methods that work together as a whole to perform some task or set of related tasks
+
+A module is said to be encapsulated if its implementation is completely hidden and it can be accessed
+only through a documented interface.
+
+Implementation inheritance (extends) breaks encapsulation
+
+The superclass programmer may change the method, and if you extends it, you might break the codes.
+
+Dynamic methods selection override
+
+Compile-Time Type checking
+
+Compiler allows method calls based on compile-time (static) type of variable.
+
+not on the runtime type
+
+Expressions have compile-time types 
+
+ex. GList<Integer> s1 = new VengeGList<Inger> (); 
+	Works because VengeGList is a GList
+
+	VengeGList<Integer> vs1 = new GList<Integer> ();
+	Not works since GList is not necessary a VengeList
+
+Casting 
+
+Java has a special syntax for forcing the compile-time type of any expression. 
+
+Put desired type in parenthesis before the expression
+
+Examples: 
+
+	Dog - Poodle
+	MaxDog based on Dog type
+	Poodle Large = (Poodle) MaxDog(a,b); the RHS is complied as Poodle not as Dog
