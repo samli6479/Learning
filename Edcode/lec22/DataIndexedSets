@@ -1,0 +1,51 @@
+Binary: Larger Example
+
+Suppose 32 bit binary number
+
+Java integer is 32 bits
+
+00 00000 00000 00000 00011 00001 10100
+
+2^2 + 2^4 + 2^5 + 2^10 + 2^11 
+
+3124
+
+Generalizing to Words
+
+Store lowercase words
+
+Convert word to unique integer representation
+
+Example use 5 bits per letter
+
+c 	3	00011
+a 	1	00001
+t 	20	10100
+
+DataINdexedWordSet diws = new DataIndexedWordSet();
+
+diws.put("cat");	3124
+diws.put("dog");	4583
+
+Save the number
+Set 3124 to True
+Set 4583 to True
+
+Two problems:
+
+1. A maximum string
+2. Ambiguity: hothead vs pothead
+
+Bottom bits of p and h is both 00
+
+Two fundamental Challenges:
+	1. How do we resolve ambiguity?
+		collision handling
+	2. How do we convert arbitrary data to an index
+		computing a hashCode
+		For Strings treated as a base 32 number
+		Java requires that Every object provide a method 
+		that converts itself into an integer: hashCode();
+
+
+

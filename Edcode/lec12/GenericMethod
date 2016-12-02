@@ -1,0 +1,15 @@
+Generic Methods
+
+1. Can create a method that operates on generic types by defining type parameters 
+before the return type of the method
+
+public static <K, V> V get(ArrayMap<K,V> am, K k){
+		if (am.containsKey(k)){
+			return am.get(k);
+		}
+		return null;
+	}
+
+Formal type parameter definitions: K,V
+
+Return type: V 

@@ -1,0 +1,16 @@
+ArrayMap with following methods
+
+1. put(key, value): Associates key with value
+
+2. containsKey(key): checks to see if arraymap contains the key
+
+3. get(key): Returns value if key exists
+
+4. keys(): Returns an array of keys.
+
+Using An ArrayMap
+
+K, V  Generic type variables
+
+When we use it we need to put actual type variables
+

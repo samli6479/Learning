@@ -1,0 +1,39 @@
+Dependencies
+
+Java classes may be dependent on other classes 
+
+Environment Variables 
+
+Every program running on your computer has access to the system's "environment variables"
+
+The variable preset up for use in java
+
+The CLASSPATH
+
+The java compiler and interpreter assume there is an environment variable called CLASSPATH
+
+and look in those folders for dependecies.
+
+* MEANS LOOKING AT .class files and .jar files
+
+./ means current directory
+
+../ means directory one up
+
+Java interpreter 
+
+Gets a command line argument specifying the class to execute 
+
+Use CLASSPATH variable to try to find that file
+
+Naming Conflicts
+
+Dog.class in current directroy and the higher directory
+
+The file in current directory runs
+
+-cp The command gives current class path
+
+You order the dependicies in order and the interpreter search things in the order
+
+-cp 

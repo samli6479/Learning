@@ -1,0 +1,83 @@
+1. Growth Like	Theata(N^2) N^2/2, 2N^2, N^2 + 38N
+2. Upper Bound  O(N^2)      N^2/2, 2N^2, log(N)
+3. Lower Bound  Omega(N^2)  N^2/2, 2N^2, e^N
+
+Analyze Algorithm Performance
+
+1. Count number of executions of a representative operation
+
+2. Focus on behavior for large N: ignore lower order terms
+
+3. Ignore constant multiplicative factors
+
+int N = a.length;
+for (int i = 0; i < N; i += 1)
+	for(int j = i + 1; j < N; j += 1)
+		if (a[i]==a[j])
+			return true;
+return false
+
+Worst case Theata(N^2)
+
+Worst case: a[i]!=a[j] for all i, j
+
+for i = 0, call N-1
+for i = 1, call N-2
+for i = 2, call N-3
+
+Call S=N-1 + N-2 + N-3 + .... + 3 + 2 + 1
+
+S = (N-1)*(N-1+1)/2 = N*(N-1)/2 
+
+Theata(N^2)
+
+def f(n):
+	for (i = 1; i<n; i = i*2)
+		for (j = 0; j < i; j+= 1)
+			print("H")
+			A = 1 + 1
+
+N = 1, i = 1, j = 0, S =1
+N = 2, i = 2, j = 0, 1, S =2
+N = 5, i = 4, j = 0, 1, 2, 3, S = 4
+N = 8, i = 8, j = 0, 1, 2, 3, 4, 5, 6, 7, S = 8
+N = 17, i = 16 j = 0 ,1 ,2 ,3 ,4...., 15, S = 16
+
+step function jump at the power of 2
+
+Sum = 2N -1 
+
+def f(n): 
+	if (n < = 1):
+	   return 1
+	return f(n-1)+f(n-1)
+
+N = 1, C = 1
+C(N) = 2 * C(N - 1) + 1
+
+Sum(C(N) = 1 + 2 + 4 + 8 + ... + 2 ^(N-1) = 2^N -1
+
+Binary Search
+
+Goal: Given a sorted array and a key, find index of the key in the array
+
+Step: 1. Compare key against middle entry
+	  2. small, go left.
+	  	 big, go right 
+	  3. Equal found
+
+Binary Search 
+
+Analysis 
+
+C(0) = 0
+C(1) = 1
+C(N) = 1 + C((N-1)/2)
+
+C(N) = logN/log2 Run time is Log N
+
+Log N growth slowly than N
+
+N*Log N is a littbit slower than N but as good as it
+
+log N < N < N log N 

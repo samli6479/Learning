@@ -1,0 +1,58 @@
+Subtype Polymorphism
+
+Polymorphism: "providing a single interface to entities of different types"
+
+static type: compile-time type
+
+dynamic type: run-time type
+
+Dog D = ShowDog()
+
+Dog is complile-time type
+
+Showdog is the run-time type
+
+A typing Puzzle 
+
+Two classes 
+
+1. Dog: Implements bark() method
+
+2. ShowDog: Extends Dog, overritdes bark method 
+
+Summarize is-a relationship 
+
+Every ShowDog is-a Dog
+
+Every Dog is-an Object 
+
+Every Types in java are a subtype of Object
+
+Interface inheritance: what (the class can do)
+
+Implementation inheritance: how (the class does it)
+
+Every method in an interface must be public 
+
+unless with keyword default, a method will be abstract.
+
+Interface details
+
+Can provide variables, but they are public static final
+
+final value can never change, used for constant gravity = 9.8
+
+A class can implement multiple interfaces
+
+Interface summay 
+
+1. Cannot be instantiated - no new EdList
+
+2. Can provide either abstract or concrete methods
+	a. Use no keyword for abstract methods
+	b. Use default keyword for concrete methods 
+
+3. Can provide only public static final variables
+
+4. Can provide only public methods. 
+

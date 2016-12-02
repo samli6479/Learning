@@ -1,0 +1,41 @@
+Analyzing the runtime of the function 
+
+public static void kviate(int [] a, int k){
+	int count = 0, N = a.length;
+	for (int i = 0; i < N; i++){
+	if (a[i] == k){
+		count += 1;
+	   }
+	}
+	a[k] += count;
+}
+
+Techniques
+1. Actual time
+
+2. Count operations for some fixed input size
+
+3. Determine symbolic execution times
+Tells you the algorithm scales
+
+Why Scaling 
+
+We care about use what algorithm in different situations
+
+Simplifications(Intuitive)
+
+Pick some representative operation (increment in this case)
+
+CALL this cost model
+
+int count = 0;
+for (int i = 0; i < N; i++)
+	if (a[i] ==0)
+		count++;
+hist[count] += 1;
+
+Ignore constant scaling factors. 2N has same shape as N
+
+Refer to the shape of a runtime function as its order of growth
+
+

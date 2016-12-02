@@ -1,0 +1,67 @@
+Promotion 
+
+Moving from a primitive type with a narrower range to a wider range
+
+1. value is promoted 
+
+Public static void ed(double x){
+	System.out.println(x);
+}
+
+int x = 20;
+ed (x); 
+
+works fine since double is wider than int
+
+but when move from wider to narrower must use casting 
+
+Public static void ed(int x){
+	System.out.println(x);
+}
+
+double x = 15;
+ed((int) x);
+
+An Immutable Data Types
+
+An immutable data type is one for which an instance cannot change 
+
+Examples: Mutable:ArrayDeque, IntList
+		  Immutable: Integer, String, Date
+
+The final keyword will help the compiler ensure immutability.
+
+final variable means you will assign a value once (either in constructor of class or in initializer)
+
+Warning: Declaring a reference as FInal does not make object immutable
+
+Example public final EdList<String> d = new EdList<String>();
+
+the d variable can never change, but the reference EdList can
+
+ex use assert(double,double)
+
+ArrayMap<Integer, Integer> am = new ArrayMap<Integer, Integer>();
+
+am.put(2,5);
+
+int ex = 5; 
+
+assert(ex, am,get(2))
+
+Automatic translation needed 
+
+1. Promote ex to double 
+
+2. Unbox am.get(2)
+
+3. Promote the unboxed am.get(2) to double
+
+Use assert(Object,Object)
+
+1. autobox ex to Integer
+
+Java will yell at you cause when you do AssertEquals()
+
+There are two ways and it does not know what to do
+ 

@@ -1,0 +1,54 @@
+Generics 
+
+Generic classes requires us to provide one or more actual type arguments
+
+EX. 
+
+Import java.util.ArrayList;
+
+public class BasicArrayList{
+	public static void main(String[] args){
+		ArrayList<String> L = new ArrayList<String>();
+		L.add('potato')
+		L.add('Ketc')
+	}
+}
+
+Include string is used for type checking
+
+Autoboxing(auto-unboxing): Implicit conversions between wrapper/primitives.
+
+Wrapper types and primitives can be used almost interchangeably
+
+If java code expects a wrapper type and gets a primitive, it is autoboxed 
+
+ex. public static void ed(Integer X){
+	System.out.println(X);
+}
+
+int x = 20;
+ed(x); x got convert to Integer type
+
+If the code expects a primitive and gets a wrapper, it is unboxed
+
+Notes:
+
+1. Arrays are never autoboxed/unboxed. an Integer[] cannot be used in place of an int[]
+
+2. Autoboxing/unboxing incurs a measurable performance impact
+
+3. Wrapper types use much more memory than primitive types.
+
+Wrapper types are most like class
+
+x -> INT instance(value 5)
+
+assume address are 64 bits ints are 32 bits java objects take 64bits +their fields
+
+Int instance(ints) 64 + 32 = 96
+
+x -> address 64 bits 
+
+96 + 64 = 160
+
+Wrapper Type Memory 

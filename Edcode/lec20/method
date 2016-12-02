@@ -1,0 +1,69 @@
+Finding a searchKey in a BST
+1. If searchKey equals label, return
+2.a. If search key < label, search left
+  b. If search key > label, search right
+
+Search, run time Theata(Log N)
+
+Insert A new key:
+	Search for a key
+		Found:
+			 do nothing 
+		If not found:
+			 Create new node
+			 Set appropriate link
+
+Deletion
+1. Deletion key has no children
+2. Deletion key has one child
+3. Deletion key has two children
+
+1. No children 
+	Delete the parent's link
+	Garbage collected
+2. one child
+	Maintain BST property
+	If the child larger than the deleted parent, then sub the spot
+
+d -> b -> a
+	   -> c
+  -> e
+
+delete d, 
+	subl c into d's position
+
+3. Two children
+Goal: 
+	1. Find new root node.
+	2. Must be > than everything in left subtree
+	3. Must be < than everything right subtree
+
+Choose either predecessor or successor
+1. Delete one of them and stick new copy in the root position
+2. Hibbard deletion
+
+Tree Height
+number of edges on the longest path between root and a leaf
+
+Bushy 
+-- full tree
+Theata(log N)
+
+Spindly
+-- Single tree
+Theata(N)
+
+BST: Mathematical Analysis
+
+1. Comparison Counting
+	If N distinct keys are inserted into a BST
+	The expected average number of compares per insert is C(N) ~ 2lnN = Theata(log N)
+
+Tree Height. If N distinct keys are inserted in random order, expected tree height 
+H(N) ~ 4.311 ln N
+
+If you Delete and insert randomly 
+
+Trees not balanced! 
+C(N)~sqrt(N)
+

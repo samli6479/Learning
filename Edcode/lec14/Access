@@ -1,0 +1,34 @@
+ Access control with inheritance and packages
+
+ access
+
+ 1. 	Public private protected package private
+Class 	 yes     yes	yes			yes
+Package  yes     no		yes			yes
+Subclass yes     no		yes			no
+World    yes     no		no			no
+
+Only code from the given class can access private members
+
+Nested class have 
+
+Code are mpt part of any package is considered as part of unnamed package
+
+Don't have any access modifiers or package names
+1. Everything is package-private
+2. Everything is part of the same package
+
+Interface is by-default public class
+
+Objects Methods
+
+eqauals
+
+== compare the bits, they must reference on the same object
+
+equals
+
+custom build, you have to make sure all the values are the same 
+
+toString
+auto called where you pass in an Object as a String argument.

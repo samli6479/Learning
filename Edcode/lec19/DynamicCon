@@ -1,0 +1,44 @@
+Goal: Given a series of pairwise integers connectedness declarations, determine if two integers (or items) are connected
+
+Two operations:
+
+1. connect(p,q): Connect items p and q
+2. isConnected(p,q): Are p and q connected?
+
+connect(0,1)
+connect(1,2)
+connect(0,4)
+connect(3,5)
+
+isConnect(2,4): true
+isConnect(3,0): false
+
+Goal: Design an efficient DisjointSets implementation
+
+1. NUmber of elements N can be huge
+2. Number of method calls M can be huge
+3. Calls to methods may be intersersed(can't assume that we stop getting
+	connect calls after some point).
+   Mix of operations
+
+Native approach:
+Connect two things: Record every single connecting line
+					Do iteration over the lines to see if it can be reached
+
+Better approach: record the sets that something belongs to
+
+Connected component is a maximal set of items that are mutually connected
+(include every conneted items)
+
+Using array
+
+int [] id 0, 0, 0, 0, 0, 1
+		  0, 1, 2, 3, 4, 5
+
+int[] where ith entry gives set number of item i
+connect(p,q): Change entries that equal id[p] to id[q]
+
+Implementation  Constructor  connect 		isConnected
+QuickFindDS    	Theata(N)    Theata(N)		 Theata(1)
+
+

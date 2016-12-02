@@ -1,0 +1,41 @@
+If a sublcass defines a static method with the same signature as a static method in the superclass, then the method in the subclass hides the one in the superclass.
+
+Difference between hide a static method and override an instance method
+
+1. The version of the overriden instance method that gets invoked is the one in the subclass
+
+2. The version of the hidden static method that gets invoked depends on whether it is invoked from the superclass or the subclass 
+
+ex. 
+Public class Animal{
+	public static void testSM(){
+		System.out.println("Hello!SM")	
+	}
+
+	public void testIM(){
+		System.out.println("Hello!IM")
+	}
+}
+
+Public class Dog extends Animal{
+	public static void testSM(){
+		System.out.println("Hello!SM sub")	
+	}
+
+	public void testIM(){
+		System.out.println("Hello!IM sub")
+	}
+}
+
+public static void main(String[] args){
+	Dog mydog = new Dog();
+	Animal myani = mydog;
+	Animal.testSM();
+	myani.testIM();
+}
+
+OUTPUT:
+
+"Hello!SM"
+
+"Hello!IM sub"

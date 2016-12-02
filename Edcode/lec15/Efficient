@@ -1,0 +1,50 @@
+Writing Efficient programs
+
+1. Programming cost
+	a. How long does it take to develop
+	b. How easy is it to read,modify, maintain (*)
+
+2. Execution cost 
+	a. How much time does your program take to execute
+	b. How much memory does your program require
+
+Modules and Encapsulation
+
+Module: A set of methods that work together as a whole to perform some
+		tasks or set of related tasks.
+
+A module is encapsulated if its implementation is completely hidden
+
+can be accessed only through a documented interface.
+
+Abstract Data type ADT
+
+Application Programming Interface API
+
+API of an ADT the list of constructors and methods,
+including desciptions of the effect of each
+
+API consists of syntactic and semantic specification
+
+1. Compiler verifies that syntax is met
+2. Tests help verify that semantics(logic) are correct
+
+Implementing Special Cases:
+
+1. Extension
+The case inhert the base case
+
+2. Delegation 
+Create a new base case, then making action on the instance 
+
+3. Adaptation
+
+Delegation vs Extension 
+
+1. Safe to use inheritance within a package
+
+2. Safe to extend classes designed and documented for extension
+
+View
+
+View provides a look inside actual data structure 

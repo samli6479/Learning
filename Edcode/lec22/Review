@@ -1,0 +1,53 @@
+Ordered Linked List
+
+A -> B -> C -> D -> E -> F ->G
+
+Worst Case		Contains 	Insert
+
+Linked List    Theata(N) 	Theata(N)
+
+Bushy Binary Search Tree
+
+		K
+	E		V
+B 	  G   P    Y
+
+Worst Case		Contains 	Insert
+
+Linked List    Theata(N) 	Theata(N)
+
+Bushy BSTs	 Theata(Log N)	Theata(Log N)
+
+Limitations: 
+
+1. Items must be comparable
+
+2. Maintaining bushiness is non-trivial
+
+3. Theata(Log N) can we do better
+
+Unordered Array
+
+azfjrdxm
+
+Worst Case		Contains 	Insert
+
+Linked List    Theata(N) 	Theata(N)
+
+Bushy BSTs	 Theata(Log N)	Theata(Log N)
+
+Unordered
+Array			Theata(N)	 Theata(N)
+
+Extreme Approach:
+
+All data is really just bits
+
+1. Use data itself as anarray index
+2. Store True and fakse in the array
+
+Downsides of this approach:
+Extremely wasteful of memory
+Need some way to generalize beyond integers
+
+Fast in contant time Array;

@@ -1,0 +1,58 @@
+How can we change our set representation so that combining two sets 
+into their union required change one value
+
+Assign each node a parent 
+
+{0, 1, 2, 4} {3, 5}
+
+0, 3 is the boss 
+
+int[] parent
+
+0 0 1 3 0 3 
+0 1 2 3 4 5
+
+Worst case connect(p,q) Single worst Theata(N)
+Worst case isConnect(p,q) Single worst case Theata(N)
+
+Implementation  Constructor  connect 		isConnected
+QuickFindDS    	Theata(N)    Theata(N)		 Theata(1)
+QuickUnionDS	Theata(N)  	 O(N) 		     O(N)
+
+Weighted QuickUnion
+
+1. Track tree size(number of elements)
+2. Always link root of smaller tree to larger tree
+
+Minimal changes needed:
+1. add size[] array 
+2. isConnect(int p, int q) no changes
+3. connect(int p, int q) two changes:
+	a. Link root of smaller to larger
+	b. update size[] array
+
+public void connect(int p, int q){
+		int i = find(p);
+		int j = find(q);
+		if (i == j) return;
+		if (size[i] < size[j]){parent[i] = j; size[j] += size[i];}
+		else {parent[j] = i; size[i] += size[j];}
+}
+
+Time proportional to depth of item involed 
+
+Max depth of any item: Log N
+
+1. Depth of an element x increases only when tree T1 that contains x is 
+linked below some other tree T2.
+	a. The size of the tree at lease doubles since weight(T2) >= Weight(T1)
+	B. Tree containing x doubles at most log N times
+
+Implementation  Constructor  connect 		isConnected
+QuickFindDS    	Theata(N)    Theata(N)		 Theata(1)
+QuickUnionDS	Theata(N)  	 O(N) 		     O(N)
+Weighted		O(N)		 O(log N)		 O(log N)
+QuickUnionDS
+
+performing M operations on a DisjoinSet object with N elements:
+1. Runtime goes from O(MN) to O(N+M log N) 

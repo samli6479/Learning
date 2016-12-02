@@ -1,0 +1,12 @@
+Perfect Balance
+Observation: Splitting-trees have perfect balance 
+
+If we split the root every node gets pushed down by one level
+If we split a leaf node or internal node then the height doesn't change
+
+M: Max number of children
+Height: Between log N/log M and log N / log 2
+
+Max number of splitting operations per insert: H
+
+Time per insert/contains: Theata(H), or Theata(log N)

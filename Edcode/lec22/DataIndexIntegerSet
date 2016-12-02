@@ -1,0 +1,42 @@
+public class DataIndexedIntegerSet {
+	boolean[] present;
+
+	public DataIndexedINtegerSet(){
+		present = new boolean[16];
+	}
+
+	public insert(int i){
+		present[i] = true;
+	}
+
+	public void insert (String s){
+		int intRep = convertToInt(s);
+		present[intRep] = true;
+	}
+
+	public boolean contains(String s){
+		int intRep = convertToInt(s);
+		return present[intRep];
+	}
+
+	public contains(int i){
+		return present[i];
+	}
+
+	public static int letterNum(String s, int i){
+		int ithChar = s.charAt(i);
+		if ((ithChar < 'a') || (ithChar > 'z'))
+			{throw new IllegalArgumentException();}
+		return ithChar - 'a' + 1;
+	}
+
+	public static int convertToInt(String s){
+		int intRep = 0;
+		for (int i = 0; i < s.length(); i++){
+			intRep = intRep << 5;
+			intRep = intRep + letterNum(s, i);
+		}
+		return intRep;
+	}
+
+}

@@ -1,0 +1,46 @@
+Biggest Array in Java is 2 billion entries.
+
+Pigeonhole principle 
+
+If there are more than 2 billion possible items, multiple items will have the same
+hashCode
+
+Suppose N items have the same hashcode h:
+	Instead of storing true in position h, store a list of these N items at position h
+
+How to implement List
+
+Easiesy way: Linked List
+ArrayList 
+Or Set
+
+Worst Case		Contains 	Insert
+
+Linked List    Theata(N) 	Theata(N)
+
+Bushy BSTs	 Theata(Log N)	Theata(Log N)
+
+Unordered
+Array			Theata(N)	 Theata(N)
+
+External		Theata(Q)	 Theata(Q)
+Chaining 		length of the longest list 
+
+External Chaining
+
+Can use modulus of hashcode to reduce bucket count
+
+If we use the 10 buckets how should we deal with it?
+
+Put in bucket = hashCode % 10
+
+External Chaining Performance
+
+Depends on the number of items in the 'bucket'
+
+If N items are distributed across M buckets, average time 
+grows with is N/M = L load factor
+
+Average runtime is Theata(L)
+
+Qu

@@ -1,0 +1,50 @@
+Canonicalization
+
+Canonical representation: A unique representation for a thing. 
+
+Not-canonical: License plate number (Can be reused, can change)
+
+Canonical: Social Insurance Number for canadians
+
+Java A package is a namespace that organize classes and interfaces.
+
+Need to creates a directory to put the files.
+
+../ move back to the upper directory
+
+ex. DogLanuch
+
+package ug.ed.animal
+
+then move all files under ug/ed/animal
+
+make sure the folders are under java classpath
+
+execute it by put java ug.ed.animal.DogLaunch
+
+External use
+
+public class ExtDogLaunch {
+	public static void main(String[] args){
+		ug.ed.animal.Dog d = new ug.ed.animal.Dog("John", "Hairy", 55);
+		System.out.println(d);
+	}
+}
+
+Packages 
+
+A package is a namespace that organizes classes and interfaces.
+
+Naming convention: Package name stats with website address(backwards)
+
+If used in from another class in same package can just use the simple name
+
+Import class 
+
+ex import org.junit.Assert;
+
+import static lets import static members of a class
+
+ex import static org.junit.Assert.assertEquals;
+
+java -d flag to generate the appropriate folders;

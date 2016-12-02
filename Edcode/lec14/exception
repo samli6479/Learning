@@ -1,0 +1,77 @@
+Handling Errors 
+
+When you have errors wrong in program 
+
+Java approach throw an exception use keyword throw
+
+Disrupts normal flow of the program
+
+Exceptions: May be Explicitly or Implicitly Thrown
+
+Implicitly
+
+public class test{
+
+public static void main (String[] args){
+	Object o = "mul";
+	int x = (int) o;
+}
+
+}
+
+Or 
+
+Explicitly
+
+public static void main(String[] args){
+	System.out.println("Akk");
+	throw new RuntimeException("For no reason.");
+}
+
+Can catch exceptions instead, prevent program from crashing 
+
+use keywords try and catch to break normal flow
+
+ex. 
+
+try {
+	......
+} catch (Exception e){
+	......
+}
+
+catch block may include corrective action
+
+Exceptions and the call stack
+
+1. ArrayRingBUffer().peek()
+2. GUitarString.sample()
+3. GuiterHeroLite.main()
+
+3. call 2.
+2. call 1. 
+
+1. throw exception no catch
+2. looks for catch no catch throw exception
+3. looks for catch no catch throw exception
+
+program crashes
+
+If exceptions reaches the bottom of the statck,
+the program crashes and Java provides a message for
+the user. The idea user is a programmer with the power 
+to do something.
+
+Checked Exceptions
+
+Compiler requires that these be CAUGHT
+
+Goal: Disallow compilation to avoid surprise program crashes.
+
+MidiUnavailableException
+
+Solve them
+
+1. Catch: use a catch block after poential exception
+
+2. Specify method as dangerous with keyword throws

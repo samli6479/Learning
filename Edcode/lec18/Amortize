@@ -1,0 +1,43 @@
+ArrayList
+
+def insert(x):
+	if (size == item.length):
+		resize(size*RFACTOR)
+	item[size]= x
+	size += 1
+
+Majority item simple add, but occational need to resize 
+
+Given N items: 
+
+Worst Case Theata(N)
+Average case Theata(1)
+
+ArrayList<Integer> x = new ArrayList<Integer> ();
+
+x.add(7)
+
+0,1,2,3
+
+0,1,2,3,7
+
+No room for 7
+
+Create 8 new containers.
+
+Copy 4 values: 4 array reads, 4 array writes, Write the new value (7)
+
+Total array operations: 9
+
+Goals for ArrayList: ai belong Theata(1)
+
+Rigorously show by overestimating contant time of each operation, and proving that 
+resulting poential is never < 0.
+
+Tilde Notation
+
+Function f(n) ~ g(n) iff lim n-> inf f(n)/g(n) = 1
+
+Tilde Notation ignores lower order terms,
+
+take into account the constant of the highest order terms.

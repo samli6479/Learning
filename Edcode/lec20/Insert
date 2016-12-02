@@ -1,0 +1,10 @@
+static BST insert(BST T, Key ik){
+	if (T == null)
+		return new BST(ik);
+	else if (ik < T.label()){
+		T.left = insert(T.left, ik);
+	}	else if (T.label() < ik){
+		T.right = insert(T.right, ik);
+	}
+	return T;
+}

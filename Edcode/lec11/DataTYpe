@@ -1,0 +1,32 @@
+Abstract Data Type(ADT) is defined only by its operations, not by its implementation.
+
+The implementation can be in any format
+
+ex.
+
+Stack ADT
+
+push(int x): puts x on top of the stack
+
+int pop(): Removes and returns the top item from the stack.
+
+we can build in Linked List or Array
+
+Java Libraries 
+
+The buil-in java.util package
+
+1. Interfaces: ADTs(lists, sets, maps)
+
+2. Abstract classes: Provides default implementations for some methods
+
+3. Implementations: Concrete classes you can use.
+
+The most important interfacrs in the java.util library extend the Collection interface
+
+1. Lists of things
+
+2. Sets of things
+
+3. Mappings between items
+	Maps also know as associative arrays, dictionaries(in Python)

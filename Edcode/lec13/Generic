@@ -1,0 +1,19 @@
+When build these, K might not have a compare to method
+
+Then we are forced to extends compare object to every class
+
+Java have built-in Compareable
+
+Can use extends keyword as a type upper bound
+
+Something that is or is a subclass of type
+
+ex. public static <K extends Comparable<K> ,V>  K maxKey(ArrayMap<K,V> am)
+
+K has to be Comparable or a subclass of Comparable
+
+ONly allow use on ArrayMaps with comparable keys. 
+
+Any ArrayMap you give must have actual parameter type thay is a subtype of Comparable<T>
+
+Comparable<T> Implemented by Integer, String

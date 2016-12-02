@@ -1,0 +1,40 @@
+Abstract classes are an intermediate level between interfaces 
+
+1. Cannot be instantiated
+
+2. Can provide either abstract or concrete methods 
+
+difference between interface-opposite
+a. Use abstract keyword for abstract methods 
+b. use no keyword for concrete methods
+
+3. Can provide variables(any kind)
+
+4. Can provide methods (any kind)
+
+Abstract Classes vs Interfaces
+
+Interfaces: 
+
+1. Primarily for interface inheritance. Limited Implementation
+2. Classes can implement multiple interfaces 
+
+Abstract classes:
+
+1. Can do anything an interface can do
+2. Subclasses only extend one abstract class
+
+Suppose we wants to write a function max() that returns the max of any array regardless of type.
+
+Object cannot be compared to other object with > sign
+
+bad way of fix write max method in dog class: Need to write tons of method for other classes
+
+Solution create an interface that guarantees a compaison method
+
+Have Dog Implement this interface 
+
+Write Maximizer class in terms of this interface.
+
+Benefits: 1. No need for array maximuzation code in every type
+		  2. Code that operates on multiple types 

@@ -1,0 +1,56 @@
+Build A map for binary search tree and we have a mapmethod
+
+For the order linked list map implementation take about linear time 
+
+Theata(N)
+
+Problem: Slow search even though it's in order 
+
+One way of solve, add randome express lanes skip list
+
+A -> B -> C -> D -> E -> F -> G
+
+A -> D, B->G
+
+Optimization: Change the Entry point
+
+Move the pointer to middle
+
+Flip the Links
+
+Make the jumps
+
+D -> B -> A
+	   -> C
+  -> F -> E
+  	   -> G
+
+Tree
+
+1. A set of nodes
+2. A set of edges that connect those nodes
+	- There is exactly one path between any two nodes 
+
+In a rooted tree we call one node the root
+
+1. Every node N except the root has exactly one parent, defined as the first node on the 
+	path from N to the root.
+2. The root is usually depicted at the top of the tree
+3. A node with no child is called a leaf
+
+In a rooted binary tree, every node has wither 0, 1, or 2 children
+
+Binary Search Tree
+
+Rooted binary tree with the BST property
+1. For every node x in the tree
+	a. Every key in the left subtree is less than X's key
+	b. Every key in the right subtree is greater than X's key
+
+Ordering must be complete, transitive and antisymmetric 
+
+1. Exactly one of p<q and q<p are true
+2. p <q and q<r imply p<r 
+3. p <= q and q <= p then p = q
+
+No duplicate keys allowed 

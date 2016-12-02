@@ -1,0 +1,36 @@
+Java allows us to iterate through LIsts "for each" or "enhanced for" loop
+
+Basically calling iterator method and calling next 
+
+The same as python iterator method
+
+ex for each method
+
+List<Integer> friends = new ArrayList<Integer>();
+
+for (int x: friends){
+	System.out.println(x);
+}
+
+same as 
+
+Iterator<Integer> seer =  friends.iterator();
+
+while (seer.hasNext()){
+	System.out.println(seer.next());
+}
+
+Compiler check
+
+1. List interface has an iterator method
+
+2. Iterator interface has next/hasNext method
+
+interface uses iterable interface put extends
+
+Iterator <T>
+
+public interface Iterator<T> {
+	boolean hasNext();
+	T next();
+}

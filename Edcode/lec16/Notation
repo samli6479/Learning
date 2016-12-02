@@ -1,0 +1,29 @@
+order of growth
+
+Asymptotic notation to describe order of growth 
+
+Big O: Used for bounding above (less than)
+
+Big Omega: Used for bounding below (greater than)
+
+Big Theta: Used for bounding both above and below (equals)
+
+Big-Theta: R(N) belongs to Theata(F(N)) 
+
+There exist positive constants k1 and k2 s.t. 
+
+k1 . f(N) <= R(N) <= k2 . f(N)
+
+for all values of N s.t. greater than some N0.
+
+ex see python graph
+
+Big O: R(N) is less than or qual to f(N)
+
+R(N) belongs to O(F(N)) 
+
+There exist positive constants k s.t. 
+
+k1 . R(N) <= k . f(N)
+
+for all values of N s.t. greater than some N0.

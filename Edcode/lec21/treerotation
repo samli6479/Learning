@@ -1,0 +1,41 @@
+Rotation:
+	Can shorten a tree
+	Preserves search tree property
+
+Given an unbalanced tree, a dequence of rotations will yield a balanced tree
+
+Red-black Tree
+
+Left-Leaning Red Black Tree  LLRB
+
+BST such that
+1. No node has two red links
+2. Every path from root to a leaf has the same number of black links
+3. Red links lean left
+
+2-3 Tree
+
+Node have maximum 2 elements and 3 children
+
+There exist an isometry between 
+2-3 tree and LLRB
+
+Isometry Maintenance (right-insert)
+
+E insert S with a red link
+
+   E        we rotate E and S       S
+      S 						E     
+
+The same as ES
+
+
+Add F to LLRB E and A
+                              ?
+F +    E     E              E
+     A     A    F         A    F   
+
+Change the color of connection of ? and E from black to red
+
+
+

@@ -1,0 +1,10 @@
+static BST find(BST T, key sk){
+	if (T == null)
+		return null;
+	if (sk.keyequals(T.label()))
+		return T;
+	else if (sk < T.label())
+		return find(T.left, sk);
+	else 
+		return find(T.right, sk);
+}

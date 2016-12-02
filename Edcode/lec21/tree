@@ -1,0 +1,64 @@
+Trouble with tree
+
+1. Fundamental issue: Too lazy about where to store data
+
+One solution:
+
+Insert in random order
+	Result in Theata(log N) height
+
+Why don't do it.
+	Data may come one at a time
+
+The problem is adding new leaves
+
+Solution never add new leaves
+	Tree can never get imbalaced
+	Grow the nodes instead of one element have a node with 3 elements together
+
+	node :a now is node :a,b,c
+
+What is the problem: 
+	Leaf node become a linked list too much stuff
+
+Solution?
+	Set a cap on the number of items
+	If more than cap, give an item to parent
+
+Problem:
+	Not binary tree 
+
+Fix?
+	If more than cap, give an item to parent
+		Pulling item out and splits it into left and right
+		More than two children
+	m
+e		oq
+	n   p   rs
+
+Contains(r):
+	r >m, right
+	r > o compare vs q
+	r >q, right 
+
+Examing a node might cost Z compares, but Z is a fixed number
+
+Insert u
+
+	m                           m
+e 		oq					e 		oqs
+	n   p  rstu					n 	p  r   tu
+
+Suppose insert y, z
+
+	m  							m
+e       oqs					e       oqs
+	n   p  r  tu                n   p    r  tuyz
+
+	m                           mq
+e 		oqsu                e    o   su      
+	n  p  r tyz                n  p  r t  yz
+
+If the root is maxed out
+Then the move a element up as the new root
+
